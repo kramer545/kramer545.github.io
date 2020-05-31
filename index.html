@@ -29,11 +29,6 @@
       margin: 2rem 2rem 3rem 2rem;
     }
 
-	/*
-    .project-row:nth-child(odd) {
-      flex-direction: row-reverse;
-    }
-	*/
     @media only screen and (min-width: 600px) {
       .project-row:nth-child(odd) .scan-img-container {
         width: 54.33%;
@@ -152,7 +147,10 @@
     .signals {
       display:flex;
       justify-content: space-between;
-      margin-top: 200px;
+	  padding: 150px 1rem 0 1rem;
+	  width: 66%;
+	  margin: auto;
+	  background-color: darkorange;
     }
 
     .signal > div {
@@ -191,12 +189,18 @@
     .scan-img-container {
       position: absolute;
       margin-right: 2rem;
-	  max-width: 541px;
+	  // max-width: 541px;
+	  width: 66% !important;
+    }
+	
+	@media only screen and (min-width: 600px) {
+      .scan-img-container {
+		width: 37% !important;
+      }
     }
 	
 	.scan-img-container > img {
-		max-height: 400px;
-		max-width: 541px;
+		width:100%;
 	}
 	
     @media only screen and (max-width: 600px) {
@@ -242,7 +246,7 @@
 	
 	.project-media {
 		align-self: center;
-		margin-top: 2rem;
+		// margin-top: 2rem;
 	}
 	
 	@media only screen and (min-width: 600px) {
@@ -251,23 +255,23 @@
 		}
     }
 	
-	.project-media > button {
+	.project-media  button {
 		border: none;
 		background: none;
 	}
 	
-	.project-media > button > img {
+	.project-media ~ button > img {
 		width: 4rem;
 	}	
 	
 	@media only screen and (max-width: 600px) {
-      .project-media > button {
+      .project-media ~ button {
 			position: absolute;
 		}
     }
 	
 	@media only screen and (max-width: 480px) {
-      .project-media > button > img {
+      .project-media ~ button > img {
 			width: 3rem;
 		}	
     }
@@ -327,6 +331,16 @@
 	#about_me > .project-row {
 		font-size: large;
 		text-align: center;
+	}
+	
+	#scan-img-row {
+		padding-left: 10%;
+	}
+	
+	@media only screen and (max-width: 600px) {
+		#scan-img-row {
+			padding-left: 15%;
+		}
 	}
   </style>
 
@@ -398,12 +412,14 @@
           </div>
         </div>
         <div class="project-media col s12 m7">
-			<button onclick="volumeOff()" id="volumeOnButton" style="display:none;  float:left;"><image src="volume_up.svg" /></button>
-			<button onclick="volumeOn()" id="volumeOffButton" style="float:left;"><image src="volume_off.svg" /></button>
-			<div id="stagehand-icons">
-				<span class="material-icons">music_note</span>
-				<img src="guitar.svg" style="width:35%;" />
-				<span class="material-icons" style="align-self: flex-end">music_note</span>
+			<div style="width:66%; margin:auto;">
+				<button onclick="volumeOff()" id="volumeOnButton" style="display:none;  float:right;"><image src="volume_up.svg" /></button>
+				<button onclick="volumeOn()" id="volumeOffButton" style="float:right;"><image src="volume_off.svg" /></button>
+				<div id="stagehand-icons">
+					<span class="material-icons">music_note</span>
+					<img src="guitar.svg" style="width:35%;" />
+					<span class="material-icons" style="align-self: flex-end">music_note</span>
+				</div>
 			</div>
         </div>
       </div>
@@ -419,7 +435,7 @@
             which made maintaining, viewing and verifying machine data easy for the client.
           </div>
         </div>
-        <div class="project-media col s12 m7" style="background-color: darkorange; height: 300px;">
+        <div class="project-media col s12 m7">
           <div class="signals">
             <div style="display: flex">
               <div>
@@ -461,9 +477,9 @@
         </div>
         <div class="project-media col s12 m7">
 		  <!-- In keeping youtubes 16:9 ratio, max-width is 711px for the max-height of 400px -->
-          <div class="video-container" style="max-width:711px; max-height:400px; margin:auto;">
-            <iframe id="embeddedYTVideo" width="100%" src='https://www.youtube.com/embed/lp-kD0WiaR0'
-            frameborder="0" allowfullscreen modestbranding="1" style="max-height: 400px;"></iframe>
+          <div class="video-container" style="margin:auto; width: 66%; height: 100%;">
+            <iframe id="embeddedYTVideo" width="100%" style="max-height:400px;" src='https://www.youtube.com/embed/lp-kD0WiaR0'
+            frameborder="0" allowfullscreen modestbranding="1"></iframe>
           </div>
         </div>
       </div>
@@ -478,16 +494,18 @@
             to specific areas from any location, and displaying contextual information when pointing the device at a area, such as extra details on a painting.
           </div>
         </div>
-        <div class="project-media col s12 m7 valign-wrapper" style="max-height:100%; max-width:541px; margin:auto;">
-          <div class="scan-img-container col m7">
-            <img id="baseScanImg" src="musuem_edited_sml.jpg" />
-          </div>
-          <div class="scan-img-container col m7">
-            <img id="overlayScanImg" class="scan-overlay" src="musuem_grid_sml.jpg" />
-          </div>
-          <div class="scan-img-hidden">
-            <img src="musuem_grid_sml.jpg" />
-          </div>
+        <div id="scan-img-row" class="project-media col s12 m7 valign-wrapper">
+			<div style="width:66%;">
+			  <div class="scan-img-container col m7">
+				<img id="baseScanImg" src="musuem_edited_sml.jpg" />
+			  </div>
+			  <div class="scan-img-container col m7">
+				<img id="overlayScanImg" class="scan-overlay" src="musuem_grid_sml.jpg" />
+			  </div>
+			  <div class="scan-img-hidden">
+				<img src="musuem_grid_sml.jpg" />
+			  </div>
+			 </div>
         </div>
       </div>
     </div>
