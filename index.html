@@ -21,6 +21,8 @@
     .project-text {
       text-align: center;
 	  margin-left: 0 !important;
+	  height: 100%;
+	  margin: auto;
     }
 
     .project-row {
@@ -47,6 +49,7 @@
       z-index: 2;
 	  color: white;
 	  padding-left: 1rem;
+	  text-shadow: 2px 2px black;
     }
 
     .navButtons {
@@ -190,18 +193,21 @@
     .scan-img-container {
       position: absolute;
       margin-right: 2rem;
+	  left: 50% !important;
+	  margin-left: 10% !important;
 	  // max-width: 541px;
-	  width: 66% !important;
+	  // width: 66% !important;
     }
 	
 	@media only screen and (min-width: 600px) {
       .scan-img-container {
-		width: 37% !important;
+		// width: 37% !important;
       }
     }
 	
 	.scan-img-container > img {
 		width:100%;
+		max-width: 37%;
 	}
 	
     @media only screen and (max-width: 600px) {
@@ -285,11 +291,11 @@
 	  
 	  /* Keep image in tablet icon bounds when resized */
 	  position: absolute;
-	  height: 80%;
-	  width: 50%;
+	  height: 75%;
+	  width: 30%;
 	  top: 0;
-	  left: 20%;
-	  margin: 4%;
+	  left: 33%;
+	  margin: 3%;
 
 	  /* Create the parallax scrolling effect */
 	  background-attachment: fixed;
@@ -323,12 +329,6 @@
 	  }
     }
 	
-	<!-- in keeping youtubes 16:9 ratio, if max height is 400px, width is 711px -->
-	.video-container {
-		max-width: 711px;
-		max-height: 400px;
-	}
-	
 	#about_me > .project-row {
 		font-size: large;
 		text-align: center;
@@ -354,7 +354,7 @@
       Ryan Kramer
     </div>
     <div class="row header-row">
-      <div class="introSection col s12 m6" style="margin-top:50px; margin-left: 0.5rem;">
+      <div class="introSection col s12 m6" style="margin-top:50px; margin-left: 0.5rem;text-shadow: 2px 2px black;">
         Hello World! My name is
       </div>
       <div class="introSection col s12 m6">
@@ -400,7 +400,7 @@
 		<!-- Due to the resizing nature of the design, less of the image will be visible when shrinking page -->
         <div class="project-media col s12 m7">
 			<div style="position: relative; text-align: center;">
-				<image src="tabletIcon.svg" style="width:60%;" />
+				<image src="tabletIcon.svg" style="width:33%;" />
 				<div class="parallax"></div>
 			</div>
         </div>
@@ -482,10 +482,11 @@
           </div>
         </div>
         <div class="project-media col s12 m7">
-          <div class="video-container" style="margin:auto; width: 66%; height: 100%;">
-            <iframe id="embeddedYTVideo" width="100%" style="max-height:400px;" src='https://www.youtube.com/embed/lp-kD0WiaR0'
-            frameborder="0" allowfullscreen modestbranding="1"></iframe>
-          </div>
+			<!-- padding-bottom stops it going too far below and throwing text centering off -->
+			<div class="video-container custom-video-container" style="margin:auto; width: 66%; height: 100%; padding-bottom: 400px">
+				<iframe id="embeddedYTVideo" width="100%" style="max-height:400px;" src='https://www.youtube.com/embed/lp-kD0WiaR0'
+					frameborder="0" allowfullscreen modestbranding="1" height:"400"></iframe>
+			</div>
         </div>
       </div>
 
