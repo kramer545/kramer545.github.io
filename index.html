@@ -54,7 +54,7 @@
 
     .navButtons {
       display: flex;
-      flex-wrap:wrap;
+      flex-wrap: wrap;
       justify-content: flex-end;
       position: -webkit-sticky;
       position: sticky;
@@ -65,15 +65,21 @@
       -webkit-transition: background-color 0.5s linear;
       -ms-transition: background-color 0.5s linear;
       transition: background-color 0.5s linear;
+	  
     }
 
     .navButtons > a {
       margin: 0 auto;
       font-size: 2rem;
       padding: 0.25rem;
+	  color: #6CC551;
     }
 	
 	@media only screen and (max-width: 360px) {
+		.navButtons {
+			padding-top: 2.5rem;
+		}
+		
 		.navButtons > a {
 		  margin: 0 auto;
 		  font-size: 1.5rem;
@@ -256,7 +262,6 @@
 	
 	.project-media {
 		align-self: center;
-		// margin-top: 2rem;
 	}
 	
 	@media only screen and (min-width: 600px) {
@@ -277,6 +282,10 @@
 	@media only screen and (max-width: 600px) {
       .project-media ~ button {
 			position: absolute;
+		}
+		
+		.project-media {
+			margin-top: 2rem;
 		}
     }
 	
@@ -345,14 +354,67 @@
 		#scan-img-row {
 			padding-left: 15%;
 		}
+		
+		.scan-img-container {
+			top: 0;
+		}
 	}
 	
 	#contact_me .project-row > div {
 		margin: 1rem 0;
 	}
 	
-	.navButtons > a {
-		color: #6CC551;
+	#tabletIcon {
+		width: 33%;
+	}
+	
+	#Stagehand > .project-media > div {
+		width: 66%;
+		margin: auto;
+	}
+	
+	#stagehand-icons > img {
+		width: 35%;
+	}
+	
+	.custom-video-container {
+		width: 66%;
+		padding-bottom: 400px;
+		margin: auto;
+		height: 100%;
+	}
+	
+	@media only screen and (max-width: 400px) {
+		#tabletIcon {
+			width: 66%;
+		}
+		
+		.parallax {
+			width: 50%;
+			left: 25%;
+		}
+		
+		#Stagehand > .project-media > div{
+			width: 100%;
+		}
+		
+		#volumeOnButton > img, #volumeOffButton > img {
+			width: 50%;
+		}
+		
+		#stagehand-icons > img {
+			width: 50%;
+		}
+		
+		.signals {
+			width: 100%;
+			padding: 150px 0 0 0;
+		}
+		
+		.custom-video-container {
+			width: auto;
+			padding-bottom: 200px;
+		}
 	}
   </style>
 
@@ -407,7 +469,7 @@
 		<!-- Due to the resizing nature of the design, less of the image will be visible when shrinking page -->
         <div class="project-media col s12 m7">
 			<div style="position: relative; text-align: center;">
-				<image src="tabletIcon.svg" style="width:33%;" />
+				<image id="tabletIcon" src="tabletIcon.svg" />
 				<div class="parallax"></div>
 			</div>
         </div>
@@ -425,12 +487,12 @@
           </div>
         </div>
         <div class="project-media col s12 m7">
-			<div style="width:66%; margin:auto;">
+			<div>
 				<button onclick="volumeOff()" id="volumeOnButton" style="display:none;  float:right;"><image src="volume_up.svg" /></button>
 				<button onclick="volumeOn()" id="volumeOffButton" style="float:right;"><image src="volume_off.svg" /></button>
 				<div id="stagehand-icons">
 					<span class="material-icons">music_note</span>
-					<img src="guitar.svg" style="width:35%;" />
+					<img src="guitar.svg" />
 					<span class="material-icons" style="align-self: flex-end">music_note</span>
 				</div>
 			</div>
@@ -490,7 +552,7 @@
         </div>
         <div class="project-media col s12 m7">
 			<!-- padding-bottom stops it going too far below and throwing text centering off -->
-			<div class="video-container custom-video-container" style="margin:auto; width: 66%; height: 100%; padding-bottom: 400px">
+			<div class="video-container custom-video-container">
 				<iframe id="embeddedYTVideo" width="100%" style="max-height:400px;" src='https://www.youtube.com/embed/lp-kD0WiaR0'
 					frameborder="0" allowfullscreen modestbranding="1" height:"400"></iframe>
 			</div>
@@ -526,22 +588,22 @@
     <div id="contact_me" class="scrollspy section">
       <h3 class="center-align">Contact Me</h3>
       <div class="project-row row">
-        <div class="center-align col s6">
+        <div class="center-align col s12 m6">
           <div>
             <a href="mailto:kramer545@gmail.com" target="_blank" style="font-size: 24px;">kramer545@gmail.com</a>
           </div>
         </div>
-		<div class="center-align col s6">
+		<div class="center-align col s12 m6">
           <div>
             <a href="https://www.linkedin.com/in/ryan-kramer/" target="_blank"><img style="width:100px" src="LI-Logo.png" /></a>
           </div>
         </div>
-		<div class="center-align col s6">
+		<div class="center-align col s12 m6">
           <div>
             <a href="https://github.com/kramer545" target="_blank"><img style="width:100px" src="GitHub_Logo.png" /></a>
           </div>
         </div>
-		<div class="center-align col s6">
+		<div class="center-align col s12 m6">
           <div>
             <a href="resume.pdf" target="_blank" style="font-size: 24px;">Resume</a>
           </div>
