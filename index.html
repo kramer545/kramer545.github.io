@@ -90,10 +90,6 @@
       border-bottom: 2px solid #6CC551;
     }
 
-    .navButtons.animatedNavBar > a.active {
-      border-bottom: 4px solid #6CC551;
-    }
-
     .animatedNavBar {
       background-color: darkgreen;
       -webkit-transition: background-color 0.5s linear;
@@ -417,6 +413,22 @@
 			padding-bottom: 200px;
 		}
 	}
+	
+	.skill-section {
+		margin: 1rem 0;
+	}
+	
+	.skill-section > div {
+		display: flex;
+		justify-content: space-evenly;
+		padding: 0.25rem 0.75rem !important;
+	}
+	
+	@media only screen and (max-width: 992px) {
+		.skill-section:last-child {
+			margin: auto;
+		}
+	}
   </style>
 
   <body onresize="headerWidth()">
@@ -434,6 +446,7 @@
     <div id='navButtons' class='navButtons'>
       <a href='#about_me'>About Me</a>
       <a href="#projects">Projects</a>
+	  <a href="#skills">Skills</a>
       <a href="#contact_me">Contact Me</a>
     </div>
 
@@ -585,6 +598,80 @@
         </div>
       </div>
     </div>
+	
+	<div id="skills" class="scrollSpy section">
+		<h3 class="center-align">Skills</h3>
+		<div class="project-row row">
+			<div class="center-align skill-section col s12 m6 l4">
+				<h5 class="center-align">Abilities</h3>
+				<div class="center-align col s12 m6">
+				  <div>Full Stack Development</div>
+				</div>
+				<div class="center-align col s12 m6">
+				  <div>Mobile Development</div>
+				</div>
+				<div class="center-align col s12 m6">
+				  <div>Cloud Computing</div>
+				</div>
+				<div class="center-align col s12 m6">
+				  <div>IoT Communication</div>
+				</div>
+				<div class="center-align col s12 m6">
+				  <div>Virtual and Augmented Reality</div>
+				</div>
+			</div>
+			
+			<div class="center-align skill-section col s12 m6 l4">
+				<h5 class="center-align">Languages</h3>
+				<div class="center-align col s12 m6">
+				  <div>Python</div>
+				</div>
+				<div class="center-align col s12 m6">
+				  <div>Java</div>
+				</div>
+				<div class="center-align col s12 m6">
+				  <div>Javascript</div>
+				</div>
+				<div class="center-align col s12 m6">
+				  <div>PHP</div>
+				</div>
+				<div class="center-align col s12 m6">
+				  <div>C#</div>
+				</div>
+				<div class="center-align col s12 m6">
+				  <div>C++</div>
+				</div>
+			</div>
+			
+			<div class="center-align skill-section col s12 m6 l4">
+				<h5 class="center-align">Technologies</h3>
+				<div class="center-align col s12 m6">
+				  <div>AJAX</div>
+				</div>
+				<div class="center-align col s12 m6">
+				  <div>jQuery</div>
+				</div>
+				<div class="center-align col s12 m6">
+				  <div>NodeJS</div>
+				</div>
+				<div class="center-align col s12 m6">
+				  <div>SQL</div>
+				</div>
+				<div class="center-align col s12 m6">
+				  <div>Postgres</div>
+				</div>
+				<div class="center-align col s12 m6">
+				  <div>MarkoJS / React</div>
+				</div>
+				<div class="center-align col s12 m6">
+				  <div>Express</div>
+				</div>
+				<div class="center-align col s12 m6">
+				  <div>MVC / MVVM</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
     <div id="contact_me" class="scrollspy section">
       <h3 class="center-align">Contact Me</h3>
