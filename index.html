@@ -421,13 +421,19 @@
 	.skill-section > div {
 		display: flex;
 		justify-content: space-evenly;
-		padding: 0.25rem 0.75rem !important;
+		padding: 0.5rem 0.75rem !important;
+		font-size: 18px;
 	}
 	
 	@media only screen and (max-width: 992px) {
 		.skill-section:last-child {
 			margin: auto;
+			width: 100% !important;
 		}
+	}
+	
+	.section {
+		padding-top: 2rem !important;
 	}
   </style>
 
@@ -447,7 +453,6 @@
       <a href='#about_me'>About Me</a>
       <a href="#projects">Projects</a>
 	  <a href="#skills">Skills</a>
-      <a href="#contact_me">Contact Me</a>
     </div>
 
     <div id="about_me" class="scrollspy section">
@@ -465,6 +470,31 @@
 		When I am not working, learning on my own time or working on personal projects, I love to go on hikes with my dog,
 		hang out with my friends or settle down with a nice book.
       </div>
+	  <div id="contact_me" class="Project-row row">
+      <h3 class="center-align">Contact Me</h3>
+		  <div class="project-row row">
+		  <div class="center-align col s12 m6">
+			  <div>
+				<a href="https://www.linkedin.com/in/ryan-kramer/" target="_blank"><img style="width:100px" src="LI-Logo.png" /></a>
+			  </div>
+			</div>
+			<div class="center-align col s12 m6">
+			  <div>
+				<a href="https://github.com/kramer545" target="_blank"><img style="width:100px" src="GitHub_Logo.png" /></a>
+			  </div>
+			</div>
+			<div class="center-align col s12 m6">
+			  <div>
+				<a href="mailto:kramer545@gmail.com" target="_blank" style="font-size: 24px;">kramer545@gmail.com</a>
+			  </div>
+			</div>
+			<div class="center-align col s12 m6">
+			  <div>
+				<a href="Files/Resume.pdf" target="_blank" style="font-size: 24px;">Resume</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
     </div>
 
     <div id="projects" class="scrollspy section">
@@ -601,7 +631,7 @@
 	
 	<div id="skills" class="scrollSpy section">
 		<h3 class="center-align">Skills</h3>
-		<div class="project-row row">
+		<div class="row">
 			<div class="center-align skill-section col s12 m6 l4">
 				<h5 class="center-align">Abilities</h3>
 				<div class="center-align col s12 m6">
@@ -673,32 +703,6 @@
 		</div>
 	</div>
 
-    <div id="contact_me" class="scrollspy section">
-      <h3 class="center-align">Contact Me</h3>
-      <div class="project-row row">
-        <div class="center-align col s12 m6">
-          <div>
-            <a href="mailto:kramer545@gmail.com" target="_blank" style="font-size: 24px;">kramer545@gmail.com</a>
-          </div>
-        </div>
-		<div class="center-align col s12 m6">
-          <div>
-            <a href="https://www.linkedin.com/in/ryan-kramer/" target="_blank"><img style="width:100px" src="LI-Logo.png" /></a>
-          </div>
-        </div>
-		<div class="center-align col s12 m6">
-          <div>
-            <a href="https://github.com/kramer545" target="_blank"><img style="width:100px" src="GitHub_Logo.png" /></a>
-          </div>
-        </div>
-		<div class="center-align col s12 m6">
-          <div>
-            <a href="Files/Resume.pdf" target="_blank" style="font-size: 24px;">Resume</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <script>
       // Code for setting size and position of topbar name / buttons as page scrolls
       var nameScrollLimit = 300;
@@ -726,7 +730,7 @@
 	  }
 
       $(document).ready(function(){
-        $('.scrollspy').scrollSpy({scrollOffset: 50, throttle: 100});
+        $('.scrollspy').scrollSpy({scrollOffset: 70, throttle: 100});
       });
 	  
 	  // Audio clip licensed under CC 0 License from https://freesound.org/people/NenadSimic/sounds/150879/
