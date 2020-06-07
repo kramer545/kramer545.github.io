@@ -21,7 +21,7 @@
       }
     }
 
-    .nameHeader {
+    .name-header {
       font-size: 5rem;
       font-weight: 600;
       letter-spacing: -2px;
@@ -36,7 +36,7 @@
 	  text-shadow: 2px 2px black;
     }
 
-    .navButtons {
+    .nav-buttons {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-end;
@@ -52,7 +52,7 @@
 	  
     }
 
-    .navButtons > a {
+    .nav-buttons > a {
       margin: 0 auto;
       font-size: 2rem;
       padding: 0.25rem;
@@ -60,21 +60,21 @@
     }
 	
 	@media only screen and (max-width: 360px) {
-		.navButtons {
+		.nav-buttons {
 			padding-top: 2.5rem;
 		}
 		
-		.navButtons > a {
+		.nav-buttons > a {
 		  margin: 0 auto;
 		  font-size: 1.5rem;
 		  padding: 0.25rem;
 		}
 	}
-    .navButtons > a:hover {
+    .nav-buttons > a:hover {
       border-bottom: 2px solid #6CC551;
     }
 
-    .animatedNavBar {
+    .animated-nav-bar {
       background-color: darkgreen;
       -webkit-transition: background-color 0.5s linear;
       -ms-transition: background-color 0.5s linear;
@@ -343,7 +343,7 @@
 		width: 33%;
 	}
 	
-	#Stagehand > .project-media > div {
+	#stagehand > .project-media > div {
 		width: 66%;
 		margin: auto;
 	}
@@ -365,7 +365,7 @@
 			left: 25%;
 		}
 		
-		#Stagehand > .project-media > div{
+		#stagehand > .project-media > div{
 			width: 100%;
 		}
 		
