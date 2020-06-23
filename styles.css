@@ -409,3 +409,29 @@
 	.section {
 		padding-top: 2rem !important;
 	}
+	
+	#contact_me > div {
+		width: 100%
+	}
+	
+	#contact_me img {
+		width: 12.5rem;
+	}
+	
+	#contact_me a {
+		font-size: 3rem;
+	}
+	
+	@media only screen and (max-width: 840px) {
+		#contact_me a {
+			font-size: 2rem;
+		}	
+	}
+	
+	@media only screen and (max-width:480px) {
+		#contact_me a {
+			font-size: 1.5rem;
+		}	
+	}
+	
+	
